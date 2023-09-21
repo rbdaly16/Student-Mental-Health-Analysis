@@ -167,3 +167,6 @@ pickled_models/*.pkl
 
 #Ignore pickled models
 pickled_models/
+
+#Ignore pickled models
+pickled_models/*
