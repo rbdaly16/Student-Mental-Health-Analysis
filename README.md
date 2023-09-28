@@ -3,7 +3,8 @@
 ## **Authors**:
 Bobby Daly, DS
 
-![image](https://github.com/rbdaly16/Student-Mental-Health-Analysis/assets/126971652/9d2ec361-e4f7-4a5e-aa44-30d8195095e7)
+![image](https://github.com/rbdaly16/Student-Mental-Health-Analysis/assets/126971652/75b180c7-2beb-4ee4-955d-4bb5551841e2)
+
 
 
 
