@@ -3,7 +3,8 @@
 ## **Authors**:
 Bobby Daly, DS
 
-![image.png](attachment:image.png)
+![image](https://github.com/rbdaly16/Student-Mental-Health-Analysis/assets/126971652/73744337-dea3-458b-9584-94121652dce8)
+
 
 
 ## **Overview**
@@ -23,7 +24,7 @@ Bobby Daly, DS
 ## **Modeling**
 
 
-### **Evaluation**
+## **Evaluation**
 
 
 #### **Final Model (Gradient Boosting Classifier)**
