@@ -3,7 +3,7 @@
 ## **Authors**:
 Bobby Daly, DS
 
-![image](https://github.com/rbdaly16/Student-Mental-Health-Analysis/assets/126971652/75b180c7-2beb-4ee4-955d-4bb5551841e2)
+![image](https://github.com/rbdaly16/Student-Mental-Health-Analysis/assets/126971652/75b180c7-2beb-4ee4-955d-4bb5551841e2)<br>
 
 
 
@@ -26,7 +26,7 @@ This is more accurate than my dummy model, but the recall score is much lower. W
 Mental health affects all of us. The better we are at detecting warning signs, the better we will be at supporting each other. Developmental institutions, like colleges, have a particulary large responsibility to help students in this area as much as possible. In a 2022 article from the [American Psychological Association](https://www.apa.org/monitor/2022/10/mental-health-campus-care), "more than 60% of college students met the criteria for at least one mental health problem." Luckily, this conversation is starting to gain momentum. The article goes on to detail how psychologists are becoming more involved with colleges and how supports are being put in place to help students, including a wellness app. This project seeks to work in tandem with this push and help shed light on which aspects of students' lives correlate with a high risk for depression. With that information, colleges and psychologists can put more tailored supports in place for students.
 
 ## **Data Understanding**
-![image](https://github.com/rbdaly16/Student-Mental-Health-Analysis/assets/126971652/f7224b44-78ff-4ff6-bbcf-de124c75c8a6)
+![image](https://github.com/rbdaly16/Student-Mental-Health-Analysis/assets/126971652/f7224b44-78ff-4ff6-bbcf-de124c75c8a6)<br>
 The data comes from [kaggle.com](https://www.kaggle.com/datasets/sonia22222/students-mental-health-assessments?select=students_mental_health_survey.csv). It consists of over 6,000 mental health surveys where college students provided information regarding their courses, sleep quality, physical activity, social support, and many more aspects of their lives. In this project I will be converting the Depression_Score to a binary target. Three or higher is Yes, this student has depression, and two or below means no, this student does not have depression. My goal is to find which aspects of a student's life has the greatest impact on their probability of having depression. 
 
 Instructions on accessing data:
