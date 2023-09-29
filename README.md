@@ -98,15 +98,25 @@ After multiple grid searches, this model received a better accuracy score, but t
 Since this model was not providing the desired recall score, I decided to try a Gradient Boosting Classifier. 
 
 #### **Gradient Boosting Classifier Model**
-After 10 different iterations of grid searches, I arrived at my best model, the first model that had both recall and accuracy above 50%.<br>
-ADD<br>
+After 10 different iterations of grid searches, I arrived at my best model with both a recall and accuracy score above 50%.<br>
+<img width="597" alt="Screenshot 2023-09-29 at 4 58 45 PM" src="https://github.com/rbdaly16/Student-Mental-Health-Analysis/assets/126971652/6fb252e2-0eb1-42c5-86c9-206359e623cc"><br>
+
 
 While these scores are not great, they were the best I could obtain with the data, so I decided to use it with the test data.
 
 #### **Final Model (Gradient Boosting Classifier)**
+The final model was the Gradient Boosting Classifier with Grid Search 10 with the following hyperparameters:
+- loss: deviance
+- learning_rate: 0.5
+- n_estimators: 475
+- min_samples_split: 8
+- max_depth: 24
+- max_features: 25
+- subsample: 0.1 <br>
 
-ADD
+When the final model was used on testing data it received a recall score of 49% and an accuracy score of 51%. <br>
 
+<img width="540" alt="Screenshot 2023-09-29 at 5 01 15 PM" src="https://github.com/rbdaly16/Student-Mental-Health-Analysis/assets/126971652/1b6fb25d-e726-4f73-be6e-733b6a882fea"><br>
 
 ## **Conclusions**
 When deployed on the testing data, the final model received recall score of 49% and an accuracy score of 51%. This was comparable to the cross validation score and was expected.
