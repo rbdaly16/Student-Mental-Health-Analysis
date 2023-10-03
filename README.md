@@ -57,9 +57,9 @@ In order to prepare the data for preprocessing, I first dropped the 27 rows cont
 
 After this, the preprocessing steps performed included:
 
-* scaling numerical columns
 * one-hot encoding categorical columns
 * ordinal encoding hierarchical categorical columns
+* scaling numerical columns
 
 ## **Modeling**
 In order to analyze the performance of the models I built, I focused on recall. This model could be used at schools to help determine which students may need additional support in and out of the classroom. I decided it was best to minimize false negatives (saying a student is less likely to have depression when they are actually more likely), because that would be neglecting to offer additional support when it is needed. A false positive on the other hand, would be a small cost to the school, but ultimately would just give more support to a student, which is never a bad thing. 
@@ -123,12 +123,18 @@ When deployed on the testing data, the final model received recall score of 49% 
 
 The main challenge in this project was attempting to obtain both a high recall and accuracy score. While recall is the most important because we don't want to accidentally ignore a high risk student, many models were simply doing just what the Dummy Model would do. The models struggled with correctly predicting whether a student was high or low risk because none of the columns in the dataset had a strong correlation with depression. This could be due to dishonest responses from students, simplistic snapshots of a student's complex life that doesn't take into consideration their true experiences, or most likely, a combination of both of these.
 
+As the model currently stands, I would not recommend a school implement this model. The recall and accuracy are not high enough yet to be practical. However, there are steps that can be taken to improve the efficacy of the model. 
+
 ## **Next Steps**
 After this research, I think the best way forward is to obtain honest data through a Cohort Survey with quantifiable questions that follow poarticipants over the course of a semester or school year. 
 
-The quantifiable questions are important because humans tend to lie when talking about hard topics like depression. And even when they're not consciously lying, everyone has a different lens through which they view life. For example, a good night's sleep to someone may be a poor night's sleep to another. To resolve this, we need the survey to include quantifiable questions such as, how many hours of sleep do you get? 
+The quantifiable questions are important because humans tend to lie when talking about hard topics like depression. And even when they're not consciously lying, everyone has a different lens through which they view life. For example, a good night's sleep to someone may be a poor night's sleep to another. To resolve this, we need the survey to include quantifiable questions such as, 
+- how many hours of sleep did you get last night? 
+- how many hours of physical activity did you get today?
+- how many drinks of alcohol did you have last night?
+- how many clubs/extracurricular activities are you involved in?
 
-Following the participants over the course of a semester or school year is important because human emotions vary greatly from day to day, hour to hour, minute to minute. A student stressed out to the max during an exam week may answer these questions differently than when they have very few assignments due. Having students take daily or weekly surveys throughout the year would allow us to average the data and get a more realistic picture of how each individual is truly doing. 
+The above questions would help reduce bias and standardize participant responses. But they're still just tiny snapshots into students' lives. Following the participants over the course of a semester or school year is important because human emotions vary greatly from day to day, hour to hour, minute to minute. A student stressed out to the max during an exam week may answer these questions differently than when they have very few assignments due. Having students take daily or weekly surveys throughout the semester or even the year would allow us to average the data and get a more realistic picture of how each individual is truly doing. 
 
 
 ## **Thank You**
