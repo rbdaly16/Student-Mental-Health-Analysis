@@ -73,33 +73,29 @@ In order to evaluate the models consistently, I created a function that would sh
 
 #### **Dummy Model**
 The first model I made was a Dummy Model. This model predicts 1 every single time and thus, has a perfect recall score.<br>
-<img width="416" alt="Screenshot 2023-09-29 at 11 44 53 AM" src="https://github.com/rbdaly16/Student-Mental-Health-Analysis/assets/126971652/84de8218-3886-4f53-be04-dab57d023cd7">
+![Screenshot 2023-10-04 at 10 03 12 AM](https://github.com/rbdaly16/Student-Mental-Health-Analysis/assets/126971652/2285b653-1fab-48f3-9bd8-b33d12803eae)
 
 #### **Decision Tree Model**
-The first model I created was a decision tree with all default parameters. My goal here was to purposefully create an overfit model in order to confirm it achieves a high recall score. Accomplishing this shows that I am using good enough data in order to predict the target variable. This worked successfully, this model received a recall score of 100% on the training data but below 50% on the cross validation, showing this model is very overfit. <br>
-<img width="411" alt="Screenshot 2023-09-29 at 11 46 18 AM" src="https://github.com/rbdaly16/Student-Mental-Health-Analysis/assets/126971652/0477cc2f-8cc8-4b44-ba7f-787688941aa3">
+The first real model I created after the Dummy was a decision tree with all default parameters. My goal here was to purposefully create an overfit model in order to confirm it achieves a high recall score. Accomplishing this shows that I am using good enough data in order to predict the target variable. This worked successfully, this model received a recall score of 100% on the training data but below 50% on the cross validation, showing this model is very overfit. <br>
+![Screenshot 2023-10-04 at 10 04 07 AM](https://github.com/rbdaly16/Student-Mental-Health-Analysis/assets/126971652/686b39a5-c89c-447a-b755-8bdb9dbf0bd6)
+
 
 #### **Random Forest Model**
-The decision tree certainly held promise, so I decided to use a random forest which would be able to combine the power of many decision trees. I first created a random forest model with default parameters and after a few grid searches I attempting to address the overfitting I ended up with the following scores. <br>
-<img width="540" alt="Screenshot 2023-09-29 at 11 48 00 AM" src="https://github.com/rbdaly16/Student-Mental-Health-Analysis/assets/126971652/310b1120-7013-408c-ae65-4afce7c12cae"> <br>
+The decision tree certainly held promise, so I decided to use a random forest which would be able to combine the power of many decision trees. I first created a random forest model with default parameters and after a few grid searches attempting to address the overfitting I ended up with the following scores. <br>
+![Screenshot 2023-10-04 at 10 05 08 AM](https://github.com/rbdaly16/Student-Mental-Health-Analysis/assets/126971652/c60fbd30-0c58-4602-8d33-b0f95a77e6b0)<br>
 
 While there was much more tweaking to be done on this model, I decided to use a Gradient Boosting Classifier (shown further down) to continue this plunge because that is also a tree-based model. For now though, I decided to investigate Logistic Regression.
 
 #### **Logistic Regression Model**
-After adding polynomial features to increase complexity and tweaking with grid searches to address the overfitting, I ended with a model with the following scores. <br>
-<img width="548" alt="Screenshot 2023-09-29 at 11 51 56 AM" src="https://github.com/rbdaly16/Student-Mental-Health-Analysis/assets/126971652/ee98bf4f-ef86-4e84-94af-ed42c5b7db2a"> <br>
+After tweaking with grid searches to create overfitting and then tune it down, I ended with a model with the following scores. The model hyper-focused on the recall score and thus utlizied the l1 regularization to perform just as the Dummy model and predict High Risk everytime. <br>
+![Screenshot 2023-10-04 at 10 43 59 AM](https://github.com/rbdaly16/Student-Mental-Health-Analysis/assets/126971652/e678a818-2b2d-495a-9dd9-0211460ea82b)<br>
 
-While the recall score was excellent, the accuracy score was only about 2% more than the Dummy Model. I decided to create a Logistic Regression model focused on accuracy to see if that could help.
-
-#### **Logistic Regression Model (Accuracy)**
-After multiple grid searches, this model received a better accuracy score, but the recall score was much worse. <br>
-<img width="551" alt="Screenshot 2023-09-29 at 11 54 08 AM" src="https://github.com/rbdaly16/Student-Mental-Health-Analysis/assets/126971652/feebaf5c-9502-44b0-a76a-389b459d15e9"><br>
-
-Since this model was not providing the desired recall score, I decided to try a Gradient Boosting Classifier. 
+While the recall score is phenomenal, this model is useless as it is just doing the same thing as the Dummy Model. I decided to try a Gradient Boosting Classifier to see if tweaking of another tree-based model could address the overfitting I saw earlier in the Random Forests.
 
 #### **Gradient Boosting Classifier Model**
-After 10 different iterations of grid searches, I arrived at my best model with both a recall and accuracy score above 50%.<br>
-<img width="597" alt="Screenshot 2023-09-29 at 4 58 45 PM" src="https://github.com/rbdaly16/Student-Mental-Health-Analysis/assets/126971652/6fb252e2-0eb1-42c5-86c9-206359e623cc"><br>
+After 9 different iterations of grid searches, I arrived at my best model with both a recall and accuracy score above 50%.<br>
+![Screenshot 2023-10-04 at 10 39 57 AM](https://github.com/rbdaly16/Student-Mental-Health-Analysis/assets/126971652/09d7d57e-d87d-4002-b34a-8b4525440396) <br>
+
 
 
 While these scores are not great, they were the best I could obtain with the data, so I decided to use it with the test data.
@@ -114,12 +110,12 @@ The final model was the Gradient Boosting Classifier with Grid Search 10 with th
 - max_features: 25
 - subsample: 0.1 <br>
 
-When the final model was used on testing data it received a recall score of 49% and an accuracy score of 51%. <br>
-
-<img width="540" alt="Screenshot 2023-09-29 at 5 01 15 PM" src="https://github.com/rbdaly16/Student-Mental-Health-Analysis/assets/126971652/1b6fb25d-e726-4f73-be6e-733b6a882fea"><br>
+When the final model was used on testing data it received a recall score of 47% and an accuracy score of 51%. <br>
+![Screenshot 2023-10-04 at 10 17 24 AM](https://github.com/rbdaly16/Student-Mental-Health-Analysis/assets/126971652/daf9e6cd-8ab1-44e3-9c42-002ec13dd088)
+<br>
 
 ## **Conclusions**
-When deployed on the testing data, the final model received recall score of 49% and an accuracy score of 51%. This was comparable to the cross validation score and was expected.
+When deployed on the testing data, the final model received recall score of 47% and an accuracy score of 51%. This was comparable to the cross validation score and was expected.
 
 The main challenge in this project was attempting to obtain both a high recall and accuracy score. While recall is the most important because we don't want to accidentally ignore a high risk student, many models were simply doing just what the Dummy Model would do. The models struggled with correctly predicting whether a student was high or low risk because none of the columns in the dataset had a strong correlation with depression. This could be due to dishonest responses from students, simplistic snapshots of a student's complex life that doesn't take into consideration their true experiences, or most likely, a combination of both of these.
 
