@@ -17,9 +17,9 @@ For this project I analyzed over 6,000 college student mental health surveys. As
 - one-hot encoding categorical columns
 - ordinal encoding hierarchical categorical columns
 
-Then I began to build models that aimed to increase the recall and accuracy scores. My final model had a 49% recall score and a 51% accuracy score.
+Then I began to build models that aimed to increase the recall and accuracy scores. My final model had a 46% recall score and a 51% accuracy score.
 
-This is more accurate than my dummy model, but the recall score is much lower. While I did have a Logistic Regression model that had an 80% cross validation recall score on training data, the cross validation accuracy score was 46%. My goal was to have above 50% for both scores. While I just barely missed that goal, I did learn a lot in the process. I reached the conclusion that humans may be unreliable in self-assessments and that humans are multi-faceted. In order to make a better model, we need more reliable data. This can be achieved through quantifiable questions given to cohort surveys that follow students over time. 
+This is more accurate than my dummy model, but the recall score is much lower. My goal was to have above 50% for both scores. While I just barely missed that goal, I did learn a lot in the process. I reached the conclusion that humans may be unreliable in self-assessments and that humans are multi-faceted. In order to make a better model, we need more reliable data. This can be achieved through quantifiable questions given to cohort surveys that follow students over time. 
 
 
 ## **Business Problem**
