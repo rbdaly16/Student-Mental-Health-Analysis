@@ -17,7 +17,7 @@ For this project I analyzed over 6,000 college student mental health surveys. As
 - one-hot encoding categorical columns
 - ordinal encoding hierarchical categorical columns
 
-Then I began to build models that aimed to increase the recall and accuracy scores. My final model had a 46% recall score and a 51% accuracy score.
+Then I began to build models that aimed to increase the recall and accuracy scores. My final model had a 46.6% recall score and a 50.6% accuracy score.
 
 This is more accurate than my dummy model, but the recall score is much lower. My goal was to have above 50% for both scores. While I just barely missed that goal, I did learn a lot in the process. I reached the conclusion that humans may be unreliable in self-assessments and that humans are multi-faceted. In order to make a better model, we need more reliable data. This can be achieved through quantifiable questions given to cohort surveys that follow students over time. 
 
@@ -110,12 +110,12 @@ The final model was the Gradient Boosting Classifier with Grid Search 10 with th
 - max_features: 25
 - subsample: 0.1 <br>
 
-When the final model was used on testing data it received a recall score of 47% and an accuracy score of 51%. <br>
+When the final model was used on testing data it received a recall score of 46.6% and an accuracy score of 50.6%. <br>
 ![Screenshot 2023-10-04 at 10 17 24 AM](https://github.com/rbdaly16/Student-Mental-Health-Analysis/assets/126971652/daf9e6cd-8ab1-44e3-9c42-002ec13dd088)
 <br>
 
 ## **Conclusions**
-When deployed on the testing data, the final model received recall score of 47% and an accuracy score of 51%. This was comparable to the cross validation score and was expected.
+When deployed on the testing data, the final model received recall score of 46.6% and an accuracy score of 50.6%. This was comparable to the cross validation score and was expected.
 
 The main challenge in this project was attempting to obtain both a high recall and accuracy score. While recall is the most important because we don't want to accidentally ignore a high risk student, many models were simply doing just what the Dummy Model would do. The models struggled with correctly predicting whether a student was high or low risk because none of the columns in the dataset had a strong correlation with depression. This could be due to dishonest responses from students, simplistic snapshots of a student's complex life that doesn't take into consideration their true experiences, or most likely, a combination of both of these.
 
