@@ -17,7 +17,7 @@ For this project I analyzed over 6,000 college student mental health surveys. As
 - one-hot encoding categorical columns
 - ordinal encoding hierarchical categorical columns
 
-Then I began to build models that aimed to increase the recall and accuracy scores. My final model had a 46.6% recall score and a 50.6% accuracy score.
+Then I began to build models that aimed to increase the recall and accuracy scores. My final model had a 46.6% recall score and a 50.6% accuracy score on testing data.
 
 This is more accurate than my dummy model, but the recall score is much lower. My goal was to have above 50% for both scores. While I just barely missed that goal, I did learn a lot in the process. I reached the conclusion that humans may be unreliable in self-assessments and that humans are multi-faceted. In order to make a better model, we need more reliable data. This can be achieved through quantifiable questions given to cohort surveys that follow students over time. 
 
